@@ -19,7 +19,7 @@ secret = conf.get('sign','secret')
 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
-print ip
+server_name = server_name + '(' + ip + ')'
 
 # cpu
 cpu = psutil.cpu_percent()
