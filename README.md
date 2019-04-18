@@ -3,6 +3,9 @@
 1. client/ 客户端上报信息
 2. server/ 服务器统计信息
 
+## 使用路径
+1. /show/monitorshow/
+
 ## 测试通过
 1. centos 7
 2. python 2.7

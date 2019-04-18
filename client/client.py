@@ -10,7 +10,7 @@ import socket
 import ConfigParser
 
 conf = ConfigParser.ConfigParser()
-conf.read('client_config.ini')
+conf.read('/show/monitorshow/client/client_config.ini')
 server_id = conf.get('info','server_id')
 server_name = conf.get('info','server_name')
 server_url = conf.get('info','server_url')
