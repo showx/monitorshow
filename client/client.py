@@ -42,7 +42,7 @@ print qps_nums
 print cpu,memory,diskused
 
 headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
-params = urllib.urlencode({'server_id': server_id,'server_name':server_name, 'cpu': cpu, 'memory': memory,'disk':diskused,'qps':qps_nums,'secret':'shengsheng$'});
+params = urllib.urlencode({'server_id': server_id,'server_name':server_name, 'cpu': cpu, 'memory': memory,'disk':diskused,'qps':num_connects,'secret':'shengsheng$'});
 
 try:
 	conn = httplib.HTTPConnection(server_url);
