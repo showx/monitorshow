@@ -8,9 +8,13 @@ import psutil
 import json
 import socket
 import ConfigParser
+import os
+
+
+
 
 conf = ConfigParser.ConfigParser()
-conf.read('/show/monitorshow/client/client_config.ini')
+conf.read('/code/y/monitorshow/client/client_config.ini')
 server_id = conf.get('info','server_id')
 server_name = conf.get('info','server_name')
 server_url = conf.get('info','server_url')
@@ -21,6 +25,7 @@ hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
 server_name = server_name + '(' + ip + ')'
 
+
 # cpu
 cpu = psutil.cpu_percent()
 mem = psutil.virtual_memory()
@@ -28,10 +33,16 @@ memory = mem.percent
 #不考虑多盘的情况
 disk = psutil.disk_usage('/');
 diskused = disk.percent
+
+qps_nums = []
+search_command = 'netstat -nat |grep "ESTABLISHED"| awk "{print $4}"|awk -F: "{print $2}"|grep "80"|wc -l'
+num_connects = os.popen(search_command).read()
+qps_nums.append(num_connects)
+print qps_nums
 print cpu,memory,diskused
 
 headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
-params = urllib.urlencode({'server_id': server_id,'server_name':server_name, 'cpu': cpu, 'memory': memory,'disk':diskused,'secret':'shengsheng$'});
+params = urllib.urlencode({'server_id': server_id,'server_name':server_name, 'cpu': cpu, 'memory': memory,'disk':diskused,'qps':qps_nums,'secret':'shengsheng$'});
 
 try:
 	conn = httplib.HTTPConnection(server_url);

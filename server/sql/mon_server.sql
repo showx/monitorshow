@@ -11,7 +11,7 @@
  Target Server Version : 50642
  File Encoding         : utf-8
 
- Date: 04/18/2019 15:16:35 PM
+ Date: 04/18/2019 16:33:46 PM
 */
 
 SET NAMES utf8mb4;
@@ -28,6 +28,7 @@ CREATE TABLE `mon_server` (
   `cpu` varchar(20) NOT NULL DEFAULT '0' COMMENT 'cpu占比',
   `memory` varchar(20) NOT NULL DEFAULT '0' COMMENT '内存占比',
   `disk` varchar(20) NOT NULL DEFAULT '0' COMMENT '磁盘占比',
+  `qps` varchar(20) NOT NULL DEFAULT '0' COMMENT '请求量',
   `date` date NOT NULL COMMENT '日期',
   `times` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '时间戳',
   `update_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',

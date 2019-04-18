@@ -5,6 +5,7 @@
 
 ## 使用路径
 1. /show/monitorshow/
+2. * * * * * /show/monitorshow/client/client.py > /dev/null 2>&1 &
 
 ## 测试通过
 1. centos 7
