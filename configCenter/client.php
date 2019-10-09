@@ -8,6 +8,10 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 require_once __DIR__ . '/cls_format.php';
 $config = require_once __DIR__.'/config.php';
 $save_dir = $config['config_dir'];
+
+//设置进程名称
+cli_set_process_title("configclient");
+
 $connection = new AMQPStreamConnection($config['mq_server'], $config['mq_port'], $config['mq_username'], $config['mq_password']);
 $channel = $connection->channel();
 
