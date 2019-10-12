@@ -5,6 +5,8 @@
 3. configCenter/ 生成项目配置文件
 	 php项目专用，使用yaconf加载,不是任何环境都有composer,故提交vender文件夹
 4.autorelease/ :git hook自动发布系统。
+   /show/gitBase/  git提交的项目文件。
+   /webwww/www/    线上项目地址。 /webwww/www,可自行修改
 
 ## 使用路径
 1. /show/monitorshow/
