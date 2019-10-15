@@ -24,6 +24,7 @@ then
     else
         webAppPath='/webwww/www/'$1'/'
     fi
+    #git 基础路径保持不变
     gitBasePath='/show/gitBase/'$1'/'
     echo "git:".$gitBasePath;
     echo "web:".$webAppPath;
