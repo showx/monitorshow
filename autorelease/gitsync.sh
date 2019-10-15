@@ -20,7 +20,7 @@ if [[ $isRedeploy = true && $1 ]]
 then
     #判断$2, 有可能$1 与实际环境名不一样
     if [[ -n $2 ]];then
-        webAppPath='/webwww/www/'$2'/'
+        webAppPath=$2
     else
         webAppPath='/webwww/www/'$1'/'
     fi

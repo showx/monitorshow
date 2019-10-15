@@ -11,12 +11,14 @@ $project = $_GET['project'];
 $config = include_once "config.php";
 if(isset($config[$project]))
 {
+    $time = time();
+    $log = " [Start] project:{$project} time:{$time} \r\n ";
+    file_put_contents("/show/monitorshow/autorelease/server/record.log",$log,FILE_APPEND|LOCK_EX);
     if($config[$project]['gitToken'] == $gitToken)
     {
         //ok的情况下执行
         echo 'ok';
         //记录一下
-        $time = time();
         $pro_argv1 = $config[$project]['gitName'];
         $pro_argv2 = $config[$project]['webName'];
         $shell = "bash /show/monitorshow/autorelease/gitsync.sh {$pro_argv1} {$pro_argv2}";

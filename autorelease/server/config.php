@@ -6,7 +6,7 @@
 return [
     'test' => [
         'gitName' => 'gittest',
-        'webName' => 'gittestWeb',
+        'webName' => '/webwww/www/gittestWeb',
         'gitToken' => 'abcdefg123',
     ],
 ];
