@@ -5,7 +5,8 @@
  * php -S 0.0.0.0:9100 -t /show/monitorshow/autorelease/server
  * Author:show
  */
-$gitToken = $_SERVER['X-Gitlab-Token'];
+$gitEvent = $_SERVER['HTTP_X_GITLAB_EVENT'];
+$gitToken = $_SERVER['HTTP_X_GITLAB_TOKEN'];
 $project = $_GET['project'];
 $config = include_once "config.php";
 if(isset($config[$project]))
