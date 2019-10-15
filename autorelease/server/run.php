@@ -21,11 +21,13 @@ if(isset($config[$project]))
         $pro_argv2 = $config[$project]['webName'];
         $shell = "bash /show/monitorshow/autorelease/gitsync.sh {$pro_argv1} {$pro_argv2}";
         system($shell, $status);
-        $log = "project:{$project} status:{$status} success time:{$time} ";
+        $log = "project:{$project} status:{$status} success time:{$time} \r\n";
+        echo $log;
         file_put_contents("/show/monitorshow/autorelease/server/record.log",$log,FILE_APPEND|LOCK_EX);
     }else{
         echo 'token error';
-        $log = "project:{$project} error time:{$time} ";
+        $log = "project:{$project} error time:{$time} \r\n";
+        echo $log;
         file_put_contents("/show/monitorshow/autorelease/server/record.log",$log,FILE_APPEND|LOCK_EX);
     }
 }else{
