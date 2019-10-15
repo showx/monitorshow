@@ -1,13 +1,16 @@
 # monitorshow
 服务器监控系统
-1. client/ 客户端上报信息
-2. server/ 服务器统计信息
+1. monitor/client/ 客户端上报信息
+2. monitor/server/ 服务器统计信息(根据个人调整，暂不公开)
 3. configCenter/ 生成项目配置文件
 	 php项目专用，使用yaconf加载,不是任何环境都有composer,故提交vender文件夹
-4.autorelease/ :git hook自动发布系统。
+4. autorelease/ :git hook自动发布系统。
    /show/gitBase/  git提交的项目文件。
    /webwww/www/    线上项目地址。 /webwww/www,可自行修改
    采用gitlab的webhook
+5. monitor_third 第三方监控文件
+6. one 一键获取服务器情况
+
 ## 使用路径
 /show/monitorshow/
 
