@@ -47,9 +47,9 @@ webhook_timeout: 10
 ### supervisor
 不使用nohup,使用supervisord比较靠谱，当然使用nohup也可以,更新完配置得重启一下,以下是常用命令
 1. supervisord -c /show/monitorshow/daemon/supervisord/supervisord.conf
-2. supervisord reload
-3. supervisord status
-4. supervisord shutdown
+2. supervisorctl reload
+3. supervisorctl status
+4. supervisorctl shutdown
 
 ## 测试通过
 1. centos 7
