@@ -48,7 +48,7 @@ webhook_timeout: 10
 1. supervisord -c /show/monitorshow/daemon/supervisord/supervisord.conf
 2. supervisorctl reload (supervisorctl -c /show/monitorshow/daemon/supervisord/supervisord.conf reload)
 3. supervisorctl status (supervisorctl -c /show/monitorshow/daemon/supervisord/supervisord.conf status)
-4. supervisorctl shutdown
+4. supervisorctl shutdown (supervisorctl -c /show/monitorshow/daemon/supervisord/supervisord.conf shutdown)
 5. supervisorctl -c /show/monitorshow/daemon/supervisord/supervisord.conf reread
 
 
