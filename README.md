@@ -16,9 +16,9 @@
 
 ### [configCenter]
 1. php扩展: yaconf
-2. nohup nohup php client.php > /show/configclient.log & (客户端),接收配置方
+2. configCenter/configfiles 需要配置的文件(php数组)
 3. php server.php 发送端
-4. configCenter/configfiles 需要配置的文件(php数组)
+
  
 ### [autorelease]
 首先要确保开启gitlab的webhook功能
@@ -29,7 +29,6 @@ webhook_timeout: 10
 1. 配置gitlab的webhook地址
 2. 配置好项目config.php
 3. /show/gitBase 拉取工程 
-4. nohup php -S 0.0.0.0:9100 -t /show/monitorshow/autorelease/server &
 
 ## [monitor]
 简单服务器监控,采用滴滴报警
